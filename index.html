@@ -3,12 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage </title>
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="Stylesheet"/>
+
+     <style>
+
+    .carousel-item img{
+        height:600px;
+        object-fit: cover;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+     </style>
+
 </head>
 <body>
-    
+     <header>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container d-flex flex-column align-items-center text-center py-3">
+        <div class="h4 pb-2 mb-4 text-light border-bottom border-secondary">
+            <a class="navbar-brand mb-1" href="#" >
+                <img src="/pics/logo.jpeg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">   
+            Thé Vert</a>
+        </div>
+        <span class="navbar-text">一期一会</span>
+         <span class="navbar-text">One time, One meeting</span>
+        </div>
+        </nav>
 
-    <p> matcha </p>
-    
+         <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+            <div class="container justify-content-center">
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            </div>
+          </nav>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+
+ <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+  <div class="carousel-inner">
+
+
+    <div class="carousel-item active">
+      <img src="pics/m5.jpeg" class="d-block w-100" alt="...">
+       <div class="carousel-caption d-none d-md-block">
+          <button type="button" class="btn btn-outline-light" onclick="Products()">Shop now</button>
+        </div>
+    </div>
+
+
+
+    <div class="carousel-item">
+      <img src="pics/m2.jpeg" class="d-block w-100" alt="...">
+       <div class="carousel-caption d-none d-md-block">
+           <button type="button" class="btn btn-outline-light" onclick="Products()">Shop now</button>
+        </div>
+    </div>
+
+
+    <div class="carousel-item">
+      <img src="pics/m3.jpeg" class="d-block w-100" alt="...">
+        <div type="buttton" class=" carousel-caption d-none d-md-block ">
+          <button type="button" class="btn btn-outline-light" onclick="Products()">Shop now</button>
+        </div>
+    </div>
+   
+
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  
+</div>
+
+<div class="cointainer mt-4">
+
+    <div class="text-center mb-4 border-bottom border-dark">
+        <h2 onclick="Products()"> Explore Our Matcha Collection</h2>
+    </div>
+
+    <div class="row row-cols-4">
+   
+         <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center bg-secondary">
+                     <h5 class="card-title">Matcha drinks</h5>
+                        <img src="/products/plain.jpeg" class="img-fluid rounded mt-3" alt="No image here">
+                            <br>
+                        <p>We offer variety of refreshinhg and creamy matcha for every taste</p>
+                        <button class="btn btn-outline-light ">Matcha drinks</button>
+                </div>
+            </div>
+        </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center bg-secondary">
+                     <h5 class="card-title">Matcha Desserts</h5>
+                        <img src="/products/cookies.jpeg" class="img-fluid rounded mt-3" alt="No image here">
+                            <br>
+                        <p>Handmade sweet treats infused with matcha for a perfect balance of flavor and indulgence</p>
+                        <button class="btn btn-outline-light">Matcha cookies</button>
+                </div>
+            </div>
+        </div>
+
+
+         <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center bg-secondary">
+                     <h5 class="card-title ">Matcha set</h5>
+                        <img src="/products/matcha.jpeg" class="img-fluid rounded mt-3" alt="No image here">
+                            <br>
+                        <p>A complete set for preparing traditional matcha with ease and authenticity</p>
+                        <button class="btn btn-outline-light">Matcha set</button>
+                </div>
+            </div>
+        </div>
+
+         
+         <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center bg-secondary">
+                     <h5 class="card-title" >Matcha Powder</h5>
+                        <img src="/products/powder.jpeg" class="img-fluid rounded mt-3" alt="No image here">
+                            <br>
+                        <p>Finely ground premium green tea, ricj in flavor and natural energy</p>
+                        <button class="btn btn-outline-light">Matcha Powder</button>
+                </div>
+            </div>
+        </div>
+
+
+
+ 
+
+    </div> 
+
+</div>
+
+
+<br><br><br>
+
+</body>
+
+
+
+
+    <div class="card text-center">
+        
+        <div class="card-body card-body-dark bg-dark">
+            <h5 class="card-title card-title text-light">Thé Vert</h5>
+                <p class="card-text text-secondary">Fresh tea. Calm moments. Natural vibes</p>
+                <a href="#" class="btn text-secondary">Home</a>
+                <a href="#" class="btn text-secondary">About</a>
+                <a href="#" class="btn text-secondary">Products</a>
+                <a href="#" class="btn text-secondary">Contact</a>
+        </div>
+
+        <div class="card-footer text-body-secondary">
+            2026 Thé Vert. All rights reserved
+        </div>
+    </div>
+
+  
+</div>
+
+
+<script>
+
+
+
+</script>
+
 </body>
 </html>
