@@ -39,16 +39,20 @@
             <div class="container justify-content-center">
             <ul class="navbar-nav flex-row">
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="AboutUs.html">About</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="products.html">Products</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="#">Contact</a>
+                </li>
+
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#" onclick="logout()">Log Out</a>
                 </li>
             </ul>
             </div>
@@ -190,6 +194,11 @@
 
 <script>
 
+  function logout(){
+            localStorage.removeItem("currentuser");
+             alert("You have been logged out");
+             window.location.href = "logIn.html";
+        }
 
 
 </script>

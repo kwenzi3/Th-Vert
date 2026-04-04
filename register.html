@@ -24,6 +24,8 @@
             <div class="h4 pb-2 mb-4 text-light border-bottom border-secondary">
                 <h1>Register</h1>
             </div>
+             <span class="navbar-text">Already have an account? </span>
+            <span class="navbar-text">Press Log in to see our green delights!</span>
         </div>
         </nav>
 
@@ -36,22 +38,22 @@
             <form>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                     <input type="email" class="form-control" id="RegEmail" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted ">We'll never share your email with anyone else.</small>
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control" id="RegPass" placeholder="Password">
                 </div>
                 <br>
             
             <div class="button-container">
-                <button type="submit" class="btn btn-dark">Log in</button>
-                <button type="register" class="register btn btn-dark">Register</button>
+                <a href="logIn.html" class="btn btn-dark">Log in</a>
+                <button type="register" class="btn btn-dark" onclick=" register()">Register</button>
             </div>
 
-            </form>
+        </form>
         </div>
 
   
@@ -61,6 +63,38 @@
 
 
     <script>
+         window.onload =function(){
+            let currentuser = localStorage.getItem("currentuser");
+            if(currentuser){
+                window.location.href = "index.html";
+            }
+            else{
+                getElementById("Invalid credentials").textContent = "Cannot Log in. Invalid Password or Email" ;
+            }
+        }
+
+         function register(){
+            let usen = document.getElementById("RegEmail").value;
+            let pass = document.getElementById("RegPass").value;
+
+            if(usen ==="" || pass === ""){
+                alert("please fill the fields")
+                return;
+            }
+
+            let user ={
+                username : usen,
+                password : pass
+            };
+            localStorage.setItem("user",JSON.stringify(user));
+            window.location.href = "logIn.html";
+
+        }
+          function logout(){
+            localStorage.removeItem("currentuser");
+             window.location.href = "logIn.html";
+        }
+
 
 
 
