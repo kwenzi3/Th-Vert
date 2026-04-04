@@ -41,9 +41,15 @@
 
         <div class="container">
             <form>
+
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                     <input type="fullname" class="form-control" id="LogInName" placeholder="Enter Full Name">
+                </div>
+
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                     <input type="email" class="form-control" id="LogInEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                     <input type="Useremail" class="form-control" id="LogInEmail" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted ">We'll never share your email with anyone else.</small>
                 </div>
 
@@ -76,8 +82,9 @@
         }
 
         function LogIn(){
-             let usen = document.getElementById("LogInEmail").value;
+             let email = document.getElementById("LogInEmail").value;
             let pass = document.getElementById("LogInPass").value;
+            let name = document.getElementById("LogInName").value;
 
             let storageuser = JSON.parse(localStorage.getItem("user"));
             if(!storageuser){
@@ -85,11 +92,15 @@
                 return;
             }
 
-            if(usen === storageuser.username && pass === storageuser.password){
-                localStorage.setItem("currentuser",usen);
+            if(email === storageuser.Useremail && pass === storageuser.password && name === storageuser.fullname){
+                localStorage.setItem("currentuser",JSON.stringify({
+                    email : storageuser.Useremail,
+                    name : storageuser.fullname
+                }));
+
                 window.location.href = "index.html";
             }else{
-                 getElementById("Invalid credentials").textContent = "Cannot Log in. Invalid Password or Email" ;
+                 document.getElementById("Invalid credentials").textContent = "Cannot Log in. Invalid Password or Email" ;
                 window.location.href = "logIn.html";
             }
 
