@@ -127,7 +127,7 @@
                         <img src="/products/plain.jpeg" class="img-fluid rounded mt-3" alt="No image here">
                             <br>
                         <p>We offer variety of refreshinhg and creamy matcha for every taste</p>
-                        <button class="btn btn-outline-light ">Matcha drinks</button>
+                        <button class="btn btn-outline-light " onclick="Products()">Matcha drinks</button>
                 </div>
             </div>
         </div>
@@ -139,7 +139,7 @@
                         <img src="/products/cookies.jpeg" class="img-fluid rounded mt-3" alt="No image here">
                             <br>
                         <p>Handmade sweet treats infused with matcha for a perfect balance of flavor and indulgence</p>
-                        <button class="btn btn-outline-light">Matcha cookies</button>
+                        <button class="btn btn-outline-light"  onclick="Products()" >Matcha cookies</button>
                 </div>
             </div>
         </div>
@@ -152,7 +152,7 @@
                         <img src="/products/matcha.jpeg" class="img-fluid rounded mt-3" alt="No image here">
                             <br>
                         <p>A complete set for preparing traditional matcha with ease and authenticity</p>
-                        <button class="btn btn-outline-light">Matcha set</button>
+                        <button class="btn btn-outline-light"  onclick="Products()" >Matcha set</button>
                 </div>
             </div>
         </div>
@@ -165,7 +165,7 @@
                         <img src="/products/powder.jpeg" class="img-fluid rounded mt-3" alt="No image here">
                             <br>
                         <p>Finely ground premium green tea, ricj in flavor and natural energy</p>
-                        <button class="btn btn-outline-light">Matcha Powder</button>
+                        <button class="btn btn-outline-light"  onclick="Products()">Matcha Powder</button>
                 </div>
             </div>
         </div>
@@ -186,11 +186,11 @@
         
         <div class="card-body card-body-dark bg-dark">
             <h5 class="card-title card-title text-light">Thé Vert</h5>
-                <p class="card-text text-secondary">Fresh tea. Calm moments. Natural vibes</p>
-                <a href="#" class="btn text-secondary">Home</a>
-                <a href="#" class="btn text-secondary">About</a>
-                <a href="#" class="btn text-secondary">Products</a>
-                <a href="#" class="btn text-secondary">Contact</a>
+                 <p class="card-text text-secondary">Fresh tea. Calm moments. Natural vibes</p>
+                <a href="/index.html" class="btn text-secondary">Home</a>
+                <a href="/AboutUs.html" class="btn text-secondary">About</a>
+                <a href="/products.html" class="btn text-secondary">Products</a>
+                <a href="/contact.html" class="btn text-secondary">Contact</a>
         </div>
 
         <div class="card-footer text-body-secondary">
@@ -208,6 +208,10 @@
              alert("You have been logged out");
              window.location.href = "logIn.html";
         }
+    
+    function Products(){
+        window.location.href = "products.html";
+    }
 
 
 </script>
